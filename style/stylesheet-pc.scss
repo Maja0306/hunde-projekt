@@ -1,6 +1,6 @@
 $color-header-footer: #788E66;
 $color-white-text: #F1F1F1;
-$color-botton-span-text: #54852c;
+$color-botton-span-text: #217420;
 $color-bg-body: #DAE4D3;
 $color-second-bg: #E6F1DF;
 
@@ -12,76 +12,6 @@ $color-second-bg: #E6F1DF;
 body{
   background-color: $color-bg-body;
 }
-/*----------Generelle styles---------*/
-h1{ 
-  font-size: 50px;
-  font-weight: 100;
-  span{
-    font-size: 65px; 
-    font-weight: 700; 
-    color: $color-botton-span-text;  
-  }
-}
-h2{
-  font-size: 48px; 
-}
-h3{
-  font-size: 40px;
-  text-align: center;
-}
-p{
-  font-size: 25px;
-  letter-spacing: 1px;
-}
-
-/*Boks til en tekst og et billede ved siden af hinanden*/
-.box-two, .box-two-reverse{
-  display: flex;
-  gap: 7em;   
-  margin: 9em 20vw;
-  img{
-    height: 25vw; 
-  }
-  p{
-    margin: 2em 0; 
-  }
-  .box-two-text{
-    margin: auto 0; 
-  }
-}
-/*Modsat hvor billede kommer først*/
-.box-two-reverse{
-  flex-direction: row-reverse;
-}
-
-/*Alle knapper på siden*/
-.knap{ 
-  max-width: 20em;
-  p{
-    color: $color-white-text; 
-    text-align: center;
-    background-image: url("/img/vector-knap.png"); 
-    background-repeat: no-repeat;
-    background-size: contain;
-    padding: 1.3em 1em; 
-  }
-}
-
-.second-bg{
-  background-color: $color-second-bg;
-  padding: 9em 0; 
-}
-
-.box-three{
-  display: flex; 
-  gap: 9em;
-  justify-content: center;
-  img{
-    width: 20em; 
-    margin: 2em 0;
-  }
-}
-
 /*----------Header---------*/
 header{
   display: flex;
@@ -93,18 +23,26 @@ header{
     list-style: none;
     justify-content: center;
     gap: 7vw;
-    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);   
+    box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);  
+    a{
+      text-decoration: none;
+      color: $color-white-text; 
+    } 
     li{
       font-size: 25px; 
       margin: 3em 0 0 0; 
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-family: "Grandstander";
     } 
     img{
       height: 4em; 
       margin: auto 0;  
     }
   }
+  .logo{
+    height: 7em; 
+    margin-top: 13px; 
 
+  }
   .header-main{
     height: 140px; 
     margin: 0 4em; 
@@ -127,3 +65,140 @@ header{
 }
 
 /*---------Main--------*/
+h1{ 
+  font-size: 50px;
+  font-weight: 300; 
+  font-family: "Grandstander";
+  span{
+    font-size: 65px; 
+    font-weight: 700; 
+    color: $color-botton-span-text;
+  }
+}
+h2{
+  font-family: "Grandstander";
+  font-size: 48px; 
+  font-weight: 300;
+  span{
+    font-size: 55px;
+    font-weight: 700;
+    color: $color-botton-span-text; 
+  } 
+}
+h3{
+  font-family: "Grandstander"; 
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 2.5vw;
+}
+p{
+  font-size: 25px;
+  letter-spacing: 1px;
+  line-height: 1.5em;
+}
+.box-one{
+  display: grid;
+  img{
+    width: 40vw;  
+    justify-self: center;
+    margin-top: 5vw;
+  }
+  p{
+    margin: 0 25vw; 
+  }
+}
+/*Boks til en tekst og et billede ved siden af hinanden*/
+.box-two, .box-two-reverse{
+  display: flex;
+  gap: 6em;    
+  margin: 9em 17vw; 
+  img{
+    height: 25vw; 
+  }
+  p{
+    margin: 2em 0; 
+  }
+  .box-two-text{
+    margin: auto 0; 
+  }
+}
+/*Modsat hvor billede kommer først*/
+.box-two-reverse{
+  flex-direction: row-reverse;
+}
+
+.box-three{
+  display: flex; 
+  gap: 9vw;  
+  justify-content: center;
+  img{
+    width: 20vw;
+  }
+}
+
+
+/*Alle knapper på siden*/
+.knap{ 
+  width: 20vw;  
+  p{
+    color: $color-white-text; 
+    text-align: center;
+    background-image: url("/img/vector-knap.png"); 
+    background-repeat: no-repeat;
+    background-size: contain; 
+    padding: 1.5em 1em; 
+    font-family: "Grandstander";
+    letter-spacing: 0; 
+    font-size: 22px; 
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  } 
+}
+.first-bg{
+  background-color: transparent;
+  padding: 9em 0; 
+}
+.second-bg{
+  background-color: $color-second-bg;
+  padding: 9em 0; 
+  position: relative;
+}
+.center-text{
+  text-align: center;
+}
+.app{
+  height: 12vw;
+  width: 12vw;  
+  background-color: white; 
+  border-radius: 2vw; 
+}
+.arrow-left, .arrow-right{
+  height: 3vw;
+  max-width: 1.7vw;
+  margin-top: 4vw; 
+}
+.arrow-right{
+  rotate: 180deg;
+}
+
+/*--------Bulldog--------*/
+.dog-description{
+  font-size: 35px;
+}
+.title-over-box{
+  font-size: 70px; 
+  font-weight: 500;
+  color: $color-botton-span-text;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+/*----------Footer-------*/
+footer{
+  background-color: $color-header-footer;
+  min-height: 50vw;
+}
