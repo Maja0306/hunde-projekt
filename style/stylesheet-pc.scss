@@ -3,6 +3,7 @@ $color-white-text: #F1F1F1;
 $color-botton-span-text: #217420;
 $color-bg-body: #DAE4D3;
 $color-second-bg: #E6F1DF;
+$color-form-bg: rgb(148, 168, 130);
 
 *{
   box-sizing: border-box;
@@ -432,5 +433,97 @@ p{
 /*----------Footer-------*/
 footer{
   background-color: $color-header-footer;
-  min-height: 50vw;
-}
+  padding: 5vw 15vw; 
+  display: flex;
+  .footer-box{
+    padding-bottom: 2vw;
+    h2{
+      color: $color-white-text; 
+      padding: 2vw;
+    }
+    p{
+      padding: 1vw; 
+      color: $color-white-text;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.26); 
+    }
+    a{
+      color: $color-white-text;
+    }
+  }
+  .flex{
+    padding: 2vw 0;
+    img{
+      width: 7vw;
+      object-fit: contain;
+      aspect-ratio: 1/1;
+      border-radius: 2vw;
+    }
+  }
+  form{
+    background-color: $color-form-bg; 
+    width: 29vw;   
+    border-radius: 2vw;   
+    margin: 0 auto;
+    padding: 2vw 0; 
+    h2{
+      text-align: center; 
+      color: $color-white-text; 
+      padding: 2vw 0; 
+    }
+  }
+  input[id=navn], input[id=mail], input[id=tel], input[type=submit]{ 
+    border-radius: 2vw;
+    width: 25vw; 
+    padding: 1.5rem;
+    margin: 2vw 2vw; 
+    border: none; 
+  } 
+  input[type=submit]{ 
+    background-color: $color-botton-span-text;
+    color: white; 
+    font-size: 2vw;
+  } 
+  input[id=navn], input[id=mail], input[id=tel]{ 
+    background-color: $color-bg-body; 
+    font-size: 1vw;
+  } 
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+} 
+  @media only screen and (max-width: 1000px) { 
+    footer{
+      display: grid;
+      padding: 10vw 15vw;
+      .flex{
+        padding: 2vw 0;
+        margin-bottom: 8vw; 
+        img{
+          width: 10vw;
+          border-radius: 3vw;
+        }
+      } 
+      form{
+        width: 70vw; 
+        input[type=submit]{ 
+          font-size: 3vw; 
+          width: 62vw; 
+          margin: 0 4vw 2vw 4vw;  
+        } 
+        input[id=navn], input[id=mail], input[id=tel]{ 
+          font-size: 2vw; 
+          width: 62vw;  
+          margin: 2vw 4vw; 
+        } 
+      }
+    } 
+  }
