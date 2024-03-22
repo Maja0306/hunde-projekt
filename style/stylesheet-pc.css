@@ -276,6 +276,7 @@ p {
   /*Modsat hvor billede kommer først*/
   .box-two-reverse {
     display: grid;
+    padding-bottom: 15vw;
   }
   .box-three {
     display: grid;
@@ -435,10 +436,6 @@ p {
   }
 }
 /*--------Bulldog--------*/
-.dog-description {
-  font-size: 35px;
-}
-
 .title-over-box {
   font-size: 70px;
   font-weight: 500;
