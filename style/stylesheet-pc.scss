@@ -12,106 +12,203 @@ $color-second-bg: #E6F1DF;
 body{
   background-color: $color-bg-body;
 }
+/*---------Aside-------*/
+aside{
+  position: fixed; 
+  right: 0;
+  bottom: 5vw; 
+  background-color: rgba(76, 76, 76, 0.718);
+  width: 9vw;
+  height: 30vw; 
+  border-radius: 2vw 0 0 2vw;
+  font-size: 22px; 
+  z-index: 3;
+  li{
+    color: white;
+    list-style: none;
+    padding: 2vw 0vw;
+    font-weight: 500;
+    font-family: "Grandstander";
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}
+aside a:hover{
+  animation: aside 0.5s ease forwards;
+}
+
+@keyframes aside{
+  to{
+    border-bottom: 5px solid rgb(255, 255, 255);
+    font-size: 1.4vw; 
+  }
+}
+@media only screen and (max-width: 1000px) {
+  aside{
+    width: 100vw;
+    height: 10vw; 
+    bottom: 0;
+    border-radius: 0;
+    ul{
+      display: flex;
+      gap: 5vw; 
+      justify-content: center;
+    }
+  }
+} 
 /*----------Header---------*/
 header{
   display: flex;
+  position: fixed; 
+  z-index: 2;
+  top: 0; 
   nav{
     display: flex;
-    flex-grow: 4;
     background-color: $color-header-footer;
     color: $color-white-text;
     list-style: none;
     justify-content: center;
-    gap: 7vw;
+    gap: 6vw;
     box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.3);  
     a{
       text-decoration: none;
       color: $color-white-text; 
     } 
     li{
-      font-size: 25px; 
-      margin: 3em 0 0 0; 
+      font-size: 1.5vw;
+      margin: 5vw 0 0 0;
       font-family: "Grandstander";
     } 
     img{
-      height: 4em; 
+      height: 3vw;  
       margin: auto 0;  
     }
   }
   .logo{
-    height: 7em; 
-    margin-top: 13px; 
+    height: 6vw;
+    margin-top: 1vw;
 
   }
   .header-main{
-    height: 140px; 
-    margin: 0 4em; 
-    border-radius: 0 0 2em 2em; 
+    height: 8vw;
+    margin: 0 2vw;
+    border-radius: 0 0 2vw 2vw;
+    width: 80vw; 
   }
 
   .header-search, .header-profile{
-    height: 110px;   
-    max-width: 110px;
-    border-radius: 2em; 
+    height: 6vw;  
+    width: 6vw;
+    border-radius: 2vw;
   }
 
   .header-profile{ 
-    margin: 30px 4em 0 0;    
+    margin: 2vw 2vw 0 0;    
   }
 
   .header-search{
-    margin: 30px 0 0 4em;   
+    margin: 2vw 0 0 2vw;    
   }
 }
-
-/*---------Main--------*/
+@media only screen and (max-width: 1000px) {
+  .header-main, .header-profile, .header-search{
+    display: none; 
+  }
+  .header-phone{
+    display: flex;
+    gap: 30vw;
+    width: 100vw;
+    height: 12vw;
+  }
+  .header-profile-phone, .header-burger-phone{
+    width: 5vw;
+    height: auto; 
+  }
+  .logo-phone{
+    height: 10vw;
+    margin: 1vw 0; 
+  }
+} 
+/*---------------------Main-----------------*/
+/*----Generel typografy-----*/ 
 h1{ 
-  font-size: 50px;
+  font-size: 4.5vw;
   font-weight: 300; 
   font-family: "Grandstander";
   span{
-    font-size: 65px; 
+    font-size: 5vw; 
     font-weight: 700; 
     color: $color-botton-span-text;
   }
 }
 h2{
   font-family: "Grandstander";
-  font-size: 48px; 
+  font-size: 3vw; 
   font-weight: 300;
   span{
-    font-size: 55px;
+    font-size: 3.5vw; 
     font-weight: 700;
     color: $color-botton-span-text; 
   } 
 }
 h3{
   font-family: "Grandstander"; 
-  font-size: 40px;
+  font-size: 2vw;
   text-align: center;
   margin-bottom: 2.5vw;
 }
 p{
-  font-size: 25px;
+  font-size: 1.5vw; 
   letter-spacing: 1px;
   line-height: 1.5em;
 }
+@media only screen and (max-width: 1000px) {
+  h1{ 
+    font-size: 7vw;
+    span{
+      font-size: 9vw; 
+    }
+  }
+  h2{
+    font-size: 6vw; 
+    text-align: center;
+    span{
+      font-size: 7vw;  
+    } 
+  }
+  h3{
+    font-size: 4vw;
+  }
+  p{
+    font-size: 3vw; 
+  }
+} 
+/*------Box size-------*/
 .box-one{
   display: grid;
   img{
-    width: 40vw;  
+    width: 25vw;
     justify-self: center;
     margin-top: 5vw;
   }
-  p{
-    margin: 0 25vw; 
+  .text{
+    padding: 0 25vw; 
+    margin-bottom: 2vw; 
+  }
+  .last{
+    margin-bottom: 10vw; 
+  }
+  h1{
+    text-align: center;
   }
 }
 /*Boks til en tekst og et billede ved siden af hinanden*/
 .box-two, .box-two-reverse{
   display: flex;
-  gap: 6em;    
-  margin: 9em 17vw; 
+  gap: 6vw;
+  margin: 9vw 17vw;
   img{
     height: 25vw; 
   }
@@ -122,6 +219,7 @@ p{
     margin: auto 0; 
   }
 }
+
 /*Modsat hvor billede kommer først*/
 .box-two-reverse{
   flex-direction: row-reverse;
@@ -135,7 +233,79 @@ p{
     width: 20vw;
   }
 }
-
+.box-three-scroll{
+  display: flex; 
+  justify-content: space-evenly;
+  margin: 0 auto; 
+  width: 80vw;  
+  img{
+    width: 15vw;
+  }
+  div{
+    display: flex; 
+    width: 50vw;
+    overflow-y: auto;
+  }
+}
+@media only screen and (max-width: 1000px) { 
+  .box-one{ 
+    img{
+      width: 50vw;
+      justify-self: center;
+      margin-top: 5vw;
+    }
+    .text{
+      padding: 2vw 10vw;     
+    }
+  }
+  /*Boks til en tekst og et billede ved siden af hinanden*/
+  .box-two, .box-two-reverse{
+    display: grid;
+    img{
+      height: 50vw; 
+    }
+  }
+  
+  /*Modsat hvor billede kommer først*/
+  .box-two-reverse{
+    display: grid; 
+  }
+  
+  .box-three{
+    display: grid;
+    padding: 0 10vw; 
+    div{
+      margin: 4vw 0; 
+    }
+    img{
+      width: 40vw;
+      margin: 1vw; 
+    }
+  }
+  .box-three-scroll{
+    padding-bottom: 10vw;
+    div:nth-of-type(1){
+      overflow-y: auto;
+    }
+  }
+} 
+/*-----Generelt styling-----*/ 
+.flex{
+  display: flex;
+  gap: 2vw;
+}
+.streg{
+  height: 0.3vw;
+  width: 4vw;
+  background-color: black;
+  margin: auto 0;
+}
+.extra-pad{
+  padding-top: 5vw;
+}
+.extra-margin{
+  margin-top: 5vw; 
+}
 
 /*Alle knapper på siden*/
 .knap{ 
@@ -149,20 +319,25 @@ p{
     padding: 1.5em 1em; 
     font-family: "Grandstander";
     letter-spacing: 0; 
-    font-size: 22px; 
+    font-size: 1.5vw;
   }
   a{
     text-decoration: none;
     color: white;
   } 
 }
+.knap:hover{
+  cursor: pointer;
+  filter: saturate(3);
+}
+
 .first-bg{
   background-color: transparent;
-  padding: 9em 0; 
+  padding: 9vw 0; 
 }
 .second-bg{
   background-color: $color-second-bg;
-  padding: 9em 0; 
+  padding: 5vw 0;   
   position: relative;
 }
 .center-text{
@@ -170,19 +345,76 @@ p{
 }
 .app{
   height: 12vw;
-  width: 12vw;  
-  background-color: white; 
-  border-radius: 2vw; 
+  width: 12vw;
+  margin: 1.8vw;
+  border-radius: 4vw;
 }
 .arrow-left, .arrow-right{
   height: 3vw;
   max-width: 1.7vw;
-  margin-top: 4vw; 
+  margin-top: 4vw;
 }
 .arrow-right{
   rotate: 180deg;
+  margin-left: 2vw; 
 }
-
+.arrow-left{
+  margin-right: 2vw; 
+}
+.absolut{
+  position: relative;
+}
+.fakta-box{
+  position: absolute;
+  bottom: 3.5vw;
+  left: 55vw; 
+  p{
+    text-align: center; 
+    line-height: 6vw;
+    font-size: 1.5vw;
+  }
+}
+@media only screen and (max-width: 1000px) { 
+  .knap{
+    width: 40vw;
+    margin: 0 auto; 
+    p{
+      font-size: 3vw;
+    }
+  }
+  .arrow-left, .arrow-right{
+    height: 6vw;
+    max-width: 3.4vw;
+    margin-top: 15vw;
+  }
+  .fakta-box{
+    left: 10vw;
+    bottom: 8vw;
+    p{
+      line-height: 8vw; 
+      font-size: 3vw;
+      text-align: center; 
+    }
+  }
+  .app{
+    min-width: 25vw;
+    height: 25vw;
+    border-radius: 6vw;
+    margin: 2vw;
+  }
+  .streg{
+    display: none; 
+  }
+  .second-bg{
+    padding: 8vw 0;    
+  }
+  .extra-pad{
+    padding-top: 15vw;
+  }
+  .extra-margin{
+    margin-top: 15vw;
+  }
+} 
 /*--------Bulldog--------*/
 .dog-description{
   font-size: 35px;
