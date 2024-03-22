@@ -314,7 +314,7 @@ p{
   p{
     color: $color-white-text; 
     text-align: center;
-    background-image: url("/img/vector-knap.png"); 
+    background-image: url("../img/vector-knap.png");
     background-repeat: no-repeat;
     background-size: contain; 
     padding: 1.5em 1em; 
@@ -500,30 +500,30 @@ footer{
     overflow: hidden;
   }
 } 
-  @media only screen and (max-width: 1000px) { 
-    footer{
-      display: grid;
-      padding: 10vw 15vw;
-      .flex{
-        padding: 2vw 0;
-        margin-bottom: 8vw; 
-        img{
-          width: 10vw;
-          border-radius: 3vw;
-        }
-      } 
-      form{
-        width: 70vw; 
-        input[type=submit]{ 
-          font-size: 3vw; 
-          width: 62vw; 
-          margin: 0 4vw 2vw 4vw;  
-        } 
-        input[id=navn], input[id=mail], input[id=tel]{ 
-          font-size: 2vw; 
-          width: 62vw;  
-          margin: 2vw 4vw; 
-        } 
+@media only screen and (max-width: 1000px) { 
+  footer{
+    display: grid;
+    padding: 10vw 15vw;
+    .flex{
+      padding: 2vw 0;
+      margin-bottom: 8vw; 
+      img{
+        width: 10vw;
+        border-radius: 3vw;
       }
     } 
-  }
+    form{
+      width: 70vw; 
+      input[type=submit]{ 
+        font-size: 3vw; 
+        width: 62vw; 
+        margin: 0 4vw 2vw 4vw;  
+      } 
+      input[id=navn], input[id=mail], input[id=tel]{ 
+        font-size: 2vw; 
+        width: 62vw;  
+        margin: 2vw 4vw; 
+      } 
+    }
+  } 
+}

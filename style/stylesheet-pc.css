@@ -314,7 +314,7 @@ p {
 .knap p {
   color: #F1F1F1;
   text-align: center;
-  background-image: url("/img/vector-knap.png");
+  background-image: url("../img/vector-knap.png");
   background-repeat: no-repeat;
   background-size: contain;
   padding: 1.5em 1em;
