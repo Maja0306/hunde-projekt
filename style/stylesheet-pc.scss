@@ -46,6 +46,12 @@ aside a:hover{
     font-size: 1.4vw; 
   }
 }
+@keyframes aside-phone{
+  to{
+    border-bottom: 5px solid rgb(255, 255, 255);
+    font-size: 2vw;
+  }
+}
 @media only screen and (max-width: 1000px) {
   aside{
     width: 100vw;
@@ -57,6 +63,9 @@ aside a:hover{
       gap: 5vw; 
       justify-content: center;
     }
+  }
+  aside a:hover{
+    animation: aside-phone 0.5s ease forwards; 
   }
 } 
 /*----------Header---------*/
@@ -167,23 +176,23 @@ p{
 }
 @media only screen and (max-width: 1000px) {
   h1{ 
-    font-size: 7vw;
+    font-size: 8vw;
     span{
       font-size: 9vw; 
     }
   }
   h2{
-    font-size: 6vw; 
+    font-size: 7vw; 
     text-align: center;
     span{
-      font-size: 7vw;  
+      font-size: 8vw;  
     } 
   }
   h3{
-    font-size: 4vw;
+    font-size: 5vw;
   }
   p{
-    font-size: 3vw; 
+    font-size: 5vw; 
   }
 } 
 /*------Box size-------*/
@@ -377,10 +386,10 @@ p{
 }
 @media only screen and (max-width: 1000px) { 
   .knap{
-    width: 40vw;
+    width: 60vw;
     margin: 0 auto; 
     p{
-      font-size: 3vw;
+      font-size: 4vw;
     }
   }
   .arrow-left, .arrow-right{
@@ -393,7 +402,7 @@ p{
     bottom: 8vw;
     p{
       line-height: 8vw; 
-      font-size: 3vw;
+      font-size: 4.5vw;
       text-align: center; 
     }
   }
@@ -515,12 +524,12 @@ footer{
     form{
       width: 70vw; 
       input[type=submit]{ 
-        font-size: 3vw; 
+        font-size: 5vw; 
         width: 62vw; 
         margin: 0 4vw 2vw 4vw;  
       } 
       input[id=navn], input[id=mail], input[id=tel]{ 
-        font-size: 2vw; 
+        font-size: 5vw; 
         width: 62vw;  
         margin: 2vw 4vw; 
       } 
